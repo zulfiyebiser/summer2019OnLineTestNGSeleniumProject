@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class vytrack {
+public class vytrack_synchronization {
     private WebDriver driver;
     private WebDriverWait wait;
 
