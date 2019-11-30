@@ -1,4 +1,4 @@
-package com.tests.Assigment;
+package com.tests.BasicNavigation;
 
 import com.utils.BrowserFactory;
 import com.utils.BrowserUtils;
