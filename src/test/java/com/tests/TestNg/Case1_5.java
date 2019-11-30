@@ -1,4 +1,4 @@
-package com.tests.BasicNavigation;
+package com.tests.TestNg;
 
 import com.utils.BrowserFactory;
 import com.utils.BrowserUtils;
