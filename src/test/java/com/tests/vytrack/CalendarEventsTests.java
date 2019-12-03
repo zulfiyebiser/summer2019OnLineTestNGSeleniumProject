@@ -1,4 +1,4 @@
-package com.tests.day13;
+package com.tests.vytrack;
 
 import com.utils.BrowserUtils;
 import org.openqa.selenium.By;
@@ -50,6 +50,7 @@ public class CalendarEventsTests {
     @Test(description = "Verify that 'Create Calendar event' button is displayed")
     public void test2(){
         Assert.assertTrue(driver.findElement(By.cssSelector("[title='Create Calendar event']")).isDisplayed());
+
     }
     @AfterMethod
     public void teardown(){
