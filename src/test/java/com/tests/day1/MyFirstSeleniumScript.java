@@ -29,5 +29,6 @@ public class MyFirstSeleniumScript {
         //at the end of test execution
         //if we opened agate-we need
         driver.close();
+
     }
 }
