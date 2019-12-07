@@ -65,6 +65,8 @@ public abstract class TestBase {
             extentTest.fail(result.getThrowable());
             try {
                 // BrowserUtils.getScreenshot(result.getName())==>returns screenshot and returns location of that screenshot
+                // this method throws IOException (which is checked exception)
+                //Any checked exception Must be handled
                 extentTest.addScreenCaptureFromPath(BrowserUtils.getScreenshot(result.getName()));
             } catch (IOException e) {
                 e.printStackTrace();
