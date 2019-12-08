@@ -42,9 +42,9 @@ For Mac: right click and click and hold option button --> copy as a path name
 change \ to \\ or, /. also remove extra double quotes \"
 
      */
-    public static void main(String[] args) {
+   // public static void main(String[] args) {
 //        WebDriverManager.chromedriver().setup();
 //        ChromeDriver driver = new ChromeDriver();
-        WebDriver driver = BrowserFactory.getDriver("chrome");
-    }
+      //  WebDriver driver = BrowserFactory.getDriver("chrome");
+    //}
 }

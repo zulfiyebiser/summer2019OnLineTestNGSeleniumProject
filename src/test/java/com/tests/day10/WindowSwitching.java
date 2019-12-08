@@ -82,6 +82,6 @@ public class WindowSwitching {
     @AfterMethod
 
     public void teardown(){
-        driver.quit();
+        //driver.quit();
     }
 }
