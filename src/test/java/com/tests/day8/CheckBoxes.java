@@ -9,10 +9,12 @@ import org.testng.annotations.Test;
 import com.utils.BrowserFactory;
 import com.utils.BrowserUtils;
 import java.util.List;
+
 public class CheckBoxes {
     // command + option + L - to organize code for Mac
     // control + alt + L - to organize code for windows
     private WebDriver driver;
+
     //private because it will be used only in this class
     @BeforeMethod
     public void setup() {
@@ -21,6 +23,7 @@ public class CheckBoxes {
 //        <a href="/checkboxes">Checkboxes</a>
         driver.findElement(By.linkText("Checkboxes")).click();
     }
+
     @Test
     public void test1() {
         //find all checkboxes
@@ -32,16 +35,17 @@ public class CheckBoxes {
         List<WebElement> checkboxes = driver.findElements(By.cssSelector("[type='checkbox']"));
         int index = 1;
         for (WebElement checkbox : checkboxes) {
-            if(checkbox.isEnabled() && !checkbox.isSelected()){
+            if (checkbox.isEnabled() && !checkbox.isSelected()) {
                 checkbox.click();
-                System.out.println("Checkbox "+index +" clicked");
-            }else {
-                System.out.println("Checkbox "+index +" was not clicked");
+                System.out.println("Checkbox " + index + " clicked");
+            } else {
+                System.out.println("Checkbox " + index + " was not clicked");
             }
             index++;
         }
         BrowserUtils.wait(2);// only for demo
     }
+
     @AfterMethod
     public void teardown() {
         driver.quit();
