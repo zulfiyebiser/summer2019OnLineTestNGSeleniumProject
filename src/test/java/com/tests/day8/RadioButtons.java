@@ -53,7 +53,8 @@ public class RadioButtons {
     public void test4() {
         //how to find all radio buttons?
         //find all radio buttons
-        //any radio button will have type='radio' and input as a element type
+        //any radio button will have type='radio' and input as an element type
+
         List<WebElement> radioButtons = driver.findElements(By.cssSelector("input[type='radio']"));
 //        let's click only if button is not clicked and is available for clicking
         for (WebElement button : radioButtons) {
