@@ -3,6 +3,7 @@
     <test name="Login tests">
         <classes>
             <class name="com.tests.vytrack.LoginTests"/>
+            <class name="com.tests.vytrack.NewCalendarEventsTests"/>
 
         </classes>
     </test>
