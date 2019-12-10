@@ -6,13 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
-    // we gonna create a method
-    //that will return driver object
-    //this method will take one parameter- String browser
-    //based on the value of browser parameter
-    // method will return corresponded webdriver object
-    //if browser = chrome, then return chromedriver object
-    public static WebDriver getDriver(String browser){
+
+    //we gonna create a method
+    //that will return a webdriver object
+    //this method will take one parameter - String browser
+    //based on the value of the browser parameter
+    //method will return corresponded webdriver object
+    // if browser = chrome, then return chromedriver object
+    public static WebDriver getDriver(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
@@ -20,6 +21,7 @@ public class BrowserFactory {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }
-        return null;
+        WebDriverManager.chromedriver().setup();
+        return new ChromeDriver();
     }
 }

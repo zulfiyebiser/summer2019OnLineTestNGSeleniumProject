@@ -1,5 +1,7 @@
 package com.tests.vytrack;
 
+import com.tests.TestBase;
+import com.utils.BrowserUtils;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,26 +12,24 @@ import pages.LoginPage;
 public class SmokeTest extends TestBase {
 
     @Test(dataProvider = "navigationInfo")
-    public void smokeTest(String moduleName, String subModuleName, String pageSubTitle){
-        extentTest = extentReports.createTest("Verify that page subtitle is equals to "+pageSubTitle);
+    public void smokeTest(String moduleName, String subModuleName, String pageSubTitle) {
+        extentTest = extentReports.createTest("Verify that page subtitle is equals to " + pageSubTitle);
 
         LoginPage loginPage = new LoginPage();
         loginPage.login("storemanager85", "UserUser123");
 
-        loginPage.waitUntilLoaderMaskDisappear();
-
         loginPage.navigateTo(moduleName, subModuleName);
-
-
+       
+        loginPage.waitUntilLoaderMaskDisappear();
 
         Assert.assertEquals(loginPage.getPageSubTitle(), pageSubTitle);
 
-        extentTest.pass("Verified that page subtitle '"+pageSubTitle+"' is displayed");
+        extentTest.pass("Verified that page subtitle '" + pageSubTitle + "' is displayed");
 
     }
 
     @DataProvider(name = "navigationInfo")
-    public Object[][] navigationInfo(){
+    public Object[][] navigationInfo() {
         return new Object[][]{
                 {"Dashboards", "Dashboard", "Dashboard"},
                 {"Dashboards", "Manage Dashboards", "All Manage Dashboards"},
@@ -38,7 +38,6 @@ public class SmokeTest extends TestBase {
                 {"Activities", "Calls", "All Calls"},
                 {"Activities", "Calendar Events", "All Calendar Events"},
                 {"Sales", "Opportunities", "Open Opportunities"}
-
         };
     }
 }

@@ -1,17 +1,22 @@
 package com.tests.vytrack;
 
+import com.tests.TestBase;
 import com.utils.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+
+
+
 //we write extends TestBase to inherit @before and @after methods
 //this class will be dedicated to tests related to Login page only
 //we don't have to find elements here
 //we should find elements in page classes only
-
 public class LoginTests extends TestBase {
+
+
     @Test(description = "Verify that page title is a 'Dashboard'")
     public void test1(){
         //create page object
@@ -29,4 +34,3 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(Driver.get().getTitle(), "Dashboard");
     }
 }
-

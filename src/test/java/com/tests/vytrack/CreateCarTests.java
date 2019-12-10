@@ -1,11 +1,12 @@
 package com.tests.vytrack;
+import com.tests.TestBase;
 import org.testng.annotations.Test;
 import pages.CreateCarPage;
 import pages.LoginPage;
 import pages.VehiclesPage;
 
 
-public class CreateCarTest extends TestBase {
+public class CreateCarTests extends TestBase {
 
     @Test(description = "Create some random car")
     public void test1(){
@@ -21,6 +22,8 @@ public class CreateCarTest extends TestBase {
         loginPage.waitUntilLoaderMaskDisappear();
 
         vehiclesPage.clickToCreateAcar();
+
+
 
         loginPage.waitUntilLoaderMaskDisappear();
 

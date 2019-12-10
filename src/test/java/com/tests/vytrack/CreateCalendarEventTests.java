@@ -1,10 +1,13 @@
 package com.tests.vytrack;
 
+import com.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CalendarEventsPage;
 import pages.CreateCalendarEventPage;
 import pages.LoginPage;
+
+
 
 public class CreateCalendarEventTests extends TestBase {
 
@@ -26,7 +29,7 @@ public class CreateCalendarEventTests extends TestBase {
         calendarEventsPage.clickToCreateCalendarEvent();
 
         calendarEventsPage.waitUntilLoaderMaskDisappear();
-        String expectedOwner = "Stephan Haley";
+        String expectedOwner = "Marcella bnmbnmbmn Huels";
         String actualOwner = createCalendarEventPage.owner.getText().trim();
 
         Assert.assertEquals(actualOwner, expectedOwner);

@@ -1,5 +1,6 @@
 package pages;
 
+
 import com.utils.BrowserUtils;
 import com.utils.Driver;
 import org.openqa.selenium.By;
@@ -17,7 +18,7 @@ public class CreateCarPage extends BasePage {
     @FindBy(name = "custom_entity_type[Location]")
     public WebElement locationElement;
 
-    @FindBy(xpath = "//div[@class='btn-group pull-right open']/button[contains(text(),'Save and Close')]")
+    @FindBy(css = "[class='btn btn-success action-button']")
     public WebElement saveAndCloseButtonElement;
 
     @FindBy(css = "div[id*='FuelType']")
