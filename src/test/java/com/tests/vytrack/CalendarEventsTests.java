@@ -1,6 +1,5 @@
 package com.tests.vytrack;
 
-
 import com.utils.BrowserFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 
@@ -52,6 +52,7 @@ public class CalendarEventsTests {
 
         wait.until(ExpectedConditions.invisibilityOf(loaderMask));
     }
+
 
     @Test(description = "Verify page subtitle")
     public void test1(){

@@ -1,7 +1,9 @@
 package com.tests.vytrack;
 
 import com.tests.TestBase;
-import com.utils.BrowserUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,14 +21,18 @@ public class SmokeTest extends TestBase {
         loginPage.login("storemanager85", "UserUser123");
 
         loginPage.navigateTo(moduleName, subModuleName);
-       
+
         loginPage.waitUntilLoaderMaskDisappear();
+
+        loginPage.waitForPageSubTitle(pageSubTitle);
 
         Assert.assertEquals(loginPage.getPageSubTitle(), pageSubTitle);
 
         extentTest.pass("Verified that page subtitle '" + pageSubTitle + "' is displayed");
 
     }
+
+
 
     @DataProvider(name = "navigationInfo")
     public Object[][] navigationInfo() {
