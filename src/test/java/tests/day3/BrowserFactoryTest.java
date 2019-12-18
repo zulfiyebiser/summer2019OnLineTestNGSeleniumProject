@@ -1,0 +1,21 @@
+package tests.day3;
+
+
+import com.utils.BrowserFactory;
+import com.utils.BrowserUtils;
+import org.openqa.selenium.WebDriver;
+
+public class BrowserFactoryTest {
+    public static void main(String[] args) {
+        //now we can get webdriver like this
+        //getDriver() method will return webdriver object
+        //and we can use reference variable to work with that object
+        WebDriver driver = BrowserFactory.getDriver("chrome");
+        BrowserUtils.wait(1);
+        driver.get("http://practice.cybertekschool.com");
+        //how we can print a source code of the page?
+        System.out.println(driver.getPageSource());
+        //to finish test execution.
+       // driver.quit();
+    }
+}
