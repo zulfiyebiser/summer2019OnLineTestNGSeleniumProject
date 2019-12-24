@@ -10,6 +10,9 @@ import org.openqa.selenium.support.FindBy;
 public class CreateCarPage extends BasePage {
 
     @FindBy(css = "[id^='custom_entity_type_LicensePlate']")
+    // ^ ==> means starts with
+    // * means any part of attribute
+    //$ end of attribute
     public WebElement licensePlateElement;
 
     @FindBy(name = "custom_entity_type[Driver]")

@@ -16,7 +16,7 @@
     <test name="Vytrack regression tests">
         <parameter name="test" value="regression"></parameter>
         <packages>
-            <package name="tests.vytrack"></package>
+            <package name="com.tests.vytrack"></package>
         </packages>
     </test>
 </suite>

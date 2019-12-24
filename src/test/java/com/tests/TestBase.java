@@ -18,11 +18,15 @@ import java.io.IOException;
 //we will put here only before and after parts
 //In this way before and after methods will be the same
 //Every test class will extend testbase class
+
 public abstract class TestBase {
+
 // * ExtentReports itself does not build any reports, but allows reporters to access information, which in
 // * turn build the said reports. An example of building an HTML report and adding information to ExtentX:
 // * ExtentHtmlReporter html = new ExtentHtmlReporter("Extent.html");
 // * ExtentXReporter extentx = new ExtentXReporter("localhost");
+
+//12.05.2019 after 60 min
 
     protected static ExtentReports extentReports;
     //    The ExtentHtmlReporter creates a rich standalone HTML file. It allows several

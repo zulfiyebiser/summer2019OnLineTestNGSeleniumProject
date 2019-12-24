@@ -23,7 +23,7 @@ public class LoginPage extends BasePage {
     public WebElement warningMessage;
     public LoginPage() {
         //it's mandatory if you want to use @FindBy annotation
-        //this means LoginPage class
+        //this means LoginPage class == LoginPage.class
         //Driver.get() return webdriver object
         PageFactory.initElements(Driver.get(), this);
     }

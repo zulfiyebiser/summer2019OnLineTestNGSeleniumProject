@@ -15,9 +15,13 @@ public class SmokeTest extends TestBase {
 
     @Test(dataProvider = "navigationInfo")
     public void smokeTest(String moduleName, String subModuleName, String pageSubTitle) {
+        //to report the test comes from TestBase page
         extentTest = extentReports.createTest("Verify that page subtitle is equals to " + pageSubTitle);
 
+
+        //TO LOGIN TO THE PAGE
         LoginPage loginPage = new LoginPage();
+
         loginPage.login("storemanager85", "UserUser123");
 
         loginPage.navigateTo(moduleName, subModuleName);
