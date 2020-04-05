@@ -20,6 +20,7 @@ public class MultipleButtonsTests {
     public void verifyButton1(){
         String expectedResult = "Clicked on button one!";
         driver.findElement(By.xpath("//*[text()='Button 1']")).click();
+        BrowserUtils.wait(3);
         String actualResult = driver.findElement(By.cssSelector("#result")).getText();
         Assert.assertEquals(actualResult, expectedResult, "Result is wrong!");
         System.out.println(actualResult);

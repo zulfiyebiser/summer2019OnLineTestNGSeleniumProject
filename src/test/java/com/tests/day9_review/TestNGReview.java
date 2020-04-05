@@ -1,5 +1,6 @@
 package com.tests.day9_review;
 
+import com.utils.BrowserUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +26,7 @@ public class TestNGReview {
     public void test1(){
         System.out.println("Test 1");
         driver.get("http://google.com");
+        BrowserUtils.wait(2);
         String expectedTitle = "Google";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle, "Title is not correct!");
@@ -63,6 +65,17 @@ public class TestNGReview {
     @Test(dataProvider = "testData") // this test will run twice, because we have 2 sets of data
     public void testWithDataProvider(String url, String title){
         driver.get(url);
+        System.out.println(url +" " + title);
         Assert.assertEquals(driver.getTitle(), title);
     }
+    @DataProvider(name = "testData1")
+    public static Object[][] testData1(){
+        return new Object[][]{{"https://www.apple.com/","Apple"}, {"http://google.com","Google"}};
+    }
+    @Test(dataProvider = "testData1")
+    public void test(String url,String title){
+        System.out.println(title+ " "+ url);
+
+    }
+
 }

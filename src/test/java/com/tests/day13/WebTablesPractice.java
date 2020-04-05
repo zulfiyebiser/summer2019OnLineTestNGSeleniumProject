@@ -1,5 +1,7 @@
 package com.tests.day13;
 
+import com.utils.BrowserUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,6 +52,8 @@ public class WebTablesPractice {
         //size = amount of elements
         int actualColumnNumber = driver.findElements(By.xpath("//table[@id='table1']//th")).size();
         //th represents column
+        System.out.println(actualColumnNumber);
+        BrowserUtils.wait(2);
         int expectedColumnNumber = 6;
         Assert.assertEquals(actualColumnNumber, expectedColumnNumber);
     }
@@ -161,7 +165,7 @@ public class WebTablesPractice {
         // a - d = -3, 97 - 100
         //it check character by character,
         //if 1st character is the same, it compares 2
-        System.out.println(word.compareTo(word2));
+        System.out.println(word.compareTo(word2)); //--> word-word2 ascii numbers
         System.out.println(word.compareTo(word2) < 0);
     }
 }

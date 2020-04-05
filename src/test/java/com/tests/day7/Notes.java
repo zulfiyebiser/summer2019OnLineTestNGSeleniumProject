@@ -78,7 +78,7 @@ public class Notes {
     we can use contains. Contains will help us to find element based on partial text/value regardless of location.
     //*[contains(text(),'Incorrect')]
     //*[contains(@title,'Activity Stream')]
-    (//button)[3] - nth element of matching
+    (//button[3] - nth element of matching
     //button[3] - 3rd child
     To go to parent element: /..
     Example:

@@ -25,7 +25,7 @@ public class JSExecutorPractice {
 //            x-coord is the horizontal pixel value that you want to scroll by.
 //            y-coord is the vertical pixel value that you want to scroll by.
             js.executeScript("window.scrollBy(0, 500)");
-            BrowserUtils.wait(1);
+            BrowserUtils.wait(2);
         }
         BrowserUtils.wait(3);
     }

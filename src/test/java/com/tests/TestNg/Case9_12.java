@@ -22,6 +22,7 @@ public class Case9_12 {
     }
     @DataProvider(name="testData")
     public static Object[][] testData(){
+
         return new Object[][]{{"200"},{"301"},{"404"},{"500"}};
     }
     @Test(dataProvider = "testData")

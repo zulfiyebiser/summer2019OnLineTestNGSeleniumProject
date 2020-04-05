@@ -13,6 +13,8 @@ import java.util.Map;
 
 public class CreateCarTests extends TestBase {
 
+    //LoginPage loginPage = new LoginPage(); ==> we can create obj outside the methods
+
     @Test(description = "Create some random car")
     public void test1(){
         extentTest = extentReports.createTest("Create a new car");

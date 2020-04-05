@@ -15,7 +15,9 @@ public class DragAndDropPractice {
         driver.manage().window().maximize();
         //click on accept cookies
         BrowserUtils.wait(3);//for demo
+
         driver.findElement(By.cssSelector("button[title='Accept Cookies']")).click();
+        BrowserUtils.wait(3);//for demo
         Actions actions = new Actions(driver);
         WebElement moon = driver.findElement(By.id("draggable"));
         WebElement earth = driver.findElement(By.id("droptarget"));

@@ -62,6 +62,7 @@ public class RadioButtons {
             if (button.isEnabled() && !button.isSelected()) {
 //                then click on it
                 button.click();
+                BrowserUtils.wait(2);
 //                in this case, id attribute represents a name of the color
 //                also, there is no text in this element
 //                that's why I print attribute value

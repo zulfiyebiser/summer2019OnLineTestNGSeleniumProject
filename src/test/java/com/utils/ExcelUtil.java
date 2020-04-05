@@ -14,6 +14,25 @@ public class ExcelUtil {
     private Sheet workSheet;
     private Workbook workBook;
     private String path;
+    /*
+    	Operations with excel files:
+To connect java code with excel files we use Apache POI library. It's an open source library, means that it's free.
+Since we cannot open excel file without special decoding, we have to use library that can do it for us.
+#To open excel file, we need to do few things:
+#first of all, open file through FileInputStream
+FileInputStream instream = new FileInputStream("path/to/the/file.xlsx");
+#Then, we have to use workbook, to create object of excel file.
+Workbook workbook = WorkbookFactory.create(instream);
+* Creates the appropriate HSSFWorkbook / XSSFWorkbook from the given InputStream.
+We use WorkbookFactory, because it can open both type of excel files .xls (old) and .xlsx (new).
+workbook = excel file
+# Next step is to open spread sheet, because excel file can have multiple spreadsheets. It's like book can have many pages.
+Sheet workSheet = workbook.getSheet("name_off_sheet");
+#Then, since excel file it's a table, and table consists of rows and cells, we need open Row first.
+Row row = workSheet.getRow(0);
+#Every row consists of cells, to get data from row, we need to use Cell
+Cell cell = row.getCell(1);
+     */
 
     public ExcelUtil(String path, String sheetName) {
         this.path = path;

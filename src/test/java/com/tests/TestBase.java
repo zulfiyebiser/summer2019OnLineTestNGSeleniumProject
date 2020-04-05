@@ -9,12 +9,13 @@ import com.utils.ConfigurationReader;
 import com.utils.Driver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import org.testng.asserts.SoftAssert;
+
 
 
 import java.io.IOException;
 
 //this class will be a test foundation for all test classes
+//contains properties and actions common to asll tests
 //we will put here only before and after parts
 //In this way before and after methods will be the same
 //Every test class will extend testbase class

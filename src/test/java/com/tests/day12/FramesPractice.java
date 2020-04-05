@@ -40,6 +40,7 @@ public class FramesPractice {
         BrowserUtils.wait(2);
         driver.switchTo().defaultContent();
 
+
     }
     //in case of nested frames
     //we must switch to first frame --> then again to another frame, that is inside

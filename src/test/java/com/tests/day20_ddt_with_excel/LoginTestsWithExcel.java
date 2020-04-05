@@ -17,12 +17,13 @@ public class LoginTestsWithExcel extends TestBase {
     //username	password	firstname	lastname	result
     @Test(dataProvider = "credentials", description = "Login with different credentials")
     public void loginTest(String username, String password, String firstName, String lastName, String result) {
-        //is must because we will ge null pointer exception
+
         extentTest = extentReports.createTest("Login as "+username);
         if(username.equals("username")){
             //will make test skipped
             //it will not fail
             //because first row is dedicated to column names
+            //is must because we will get null pointer exception
             throw new SkipException("Test was skipped because it's first row!");
         }else{
             LoginPage loginPage = new LoginPage();
@@ -47,17 +48,17 @@ public class LoginTestsWithExcel extends TestBase {
 
 
 
-//
-//    public static void main(String[] args) {
-//        ExcelUtil qa2 = new ExcelUtil("vytrack_testusers.xlsx", "QA2-short");
-//        System.out.println("Row count: " + qa2.rowCount());
-//        System.out.println(qa2.getColumnsNames());
-//        // map is a data structure in map every value is referenced by key
-//        //when we retrieve data from map, we don't specify index, we specify key name
-//        //key must be unique
-//        for (Map<String, String> map : qa2.getDataList()) {
-//           // System.out.println(map);// gives all data
-//            System.out.println(map.get("username")); // gives only user names
-//        }
-  //  }
+
+    public static void main(String[] args) {
+        ExcelUtil qa2 = new ExcelUtil("vytrack_testusers.xlsx", "QA2-short");
+        System.out.println("Row count: " + qa2.rowCount());
+        System.out.println(qa2.getColumnsNames());
+        // map is a data structure in map every value is referenced by key
+        //when we retrieve data from map, we don't specify index, we specify key name
+        //key must be unique
+        for (Map<String, String> map : qa2.getDataList()) {
+            System.out.println(map);// gives all data
+            System.out.print(map.get("username")); // gives only user names
+        }
+    }
 }

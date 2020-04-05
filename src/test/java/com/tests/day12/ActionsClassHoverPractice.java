@@ -21,7 +21,7 @@ public class ActionsClassHoverPractice {
     public void test1() {
         //create object of actions class to perform actions (drag and drop, context click, move to specific point, etc...)
         Actions action = new Actions(driver);
-        //or [class='figure']:nth-of-type(1) nth means 8th, 7th, 4th child....
+        // [class='figure']:nth-of-type(1) nth means 8th, 7th, 4th child....
         WebElement image1 = driver.findElement(By.cssSelector(".figure:nth-of-type(1)"));
         //just to hover on element not click
         // build() is required when we have more than 1 action in a chain
@@ -31,7 +31,8 @@ public class ActionsClassHoverPractice {
         action.moveToElement(image1).perform();
         BrowserUtils.wait(3);//for demo
         // h5 is a grand child of .figure:nth-of-type(1) this element that contains image
-        WebElement textOfImageElement = driver.findElement(By.cssSelector(".figure:nth-of-type(1) h5"));
+        WebElement textOfImageElement = driver.findElement(By.xpath("//h5[.='name: user1']"));
+
         String expectedText = "name: user1";
         String actualText = textOfImageElement.getText();
         Assert.assertEquals(actualText, expectedText);
@@ -47,8 +48,8 @@ public class ActionsClassHoverPractice {
             Assert.assertEquals(name, "name: user"+i);
         }
     }
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
-    }
+//   // @AfterMethod
+//   // public void teardown() {
+//        driver.quit();
+//    }
 }

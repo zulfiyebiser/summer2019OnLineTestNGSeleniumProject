@@ -29,6 +29,7 @@ public class ReadTestDataFromExcelFile {
         //map it's key=value
         //list it's index=value
         Map<String, String> row = new HashMap<>();
+          // key  , value
         row.put("License Plate", "777");
         row.put("Driver", "SDET Driver");
 

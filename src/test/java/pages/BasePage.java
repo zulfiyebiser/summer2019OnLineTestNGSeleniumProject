@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import javax.swing.*;
 
 //everything that is in common among pages
+// Teplate page object for all pages
 //can go here
 //for example top menu elements don't belong to specific page
 //top menu appears on every single page
@@ -42,7 +43,7 @@ public class BasePage {
         //and page class
         //this means this page class
         PageFactory.initElements(Driver.get(), this);
-    }
+}
 
     /**
      * While this loading screen present, html code is a not complete

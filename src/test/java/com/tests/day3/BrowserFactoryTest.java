@@ -17,6 +17,6 @@ public class BrowserFactoryTest {
         //how we can print a source code of the page?
         System.out.println(driver.getPageSource());
         //to finish test execution.
-       // driver.quit();
+        driver.quit();
     }
 }

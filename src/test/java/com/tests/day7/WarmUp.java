@@ -26,7 +26,8 @@ public class WarmUp {
         // in this way ,we can ensure that element doesn't present
         // to find link with text name ==> //tagname[.'text] or //tagname[text()='text]
 
-        List<WebElement> links = driver.findElements(By.xpath("//a"));
+       // List<WebElement> links = driver.findElements(By.xpath("//a"));
+        List<WebElement> links = driver.findElements(By.tagName("a"));
         System.out.println("Number of links: "+links.size());
 
         // to print text of all links one by one

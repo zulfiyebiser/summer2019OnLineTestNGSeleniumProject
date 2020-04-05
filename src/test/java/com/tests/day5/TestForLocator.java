@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import com.utils.BrowserFactory;
 
-public class TestForIdLocator {
+public class TestForLocator {
     public static void main(String[] args) {
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/multiple_buttons");

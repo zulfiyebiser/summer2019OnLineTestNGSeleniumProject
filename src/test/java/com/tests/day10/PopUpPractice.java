@@ -22,11 +22,13 @@ public class PopUpPractice {
     @Test(description = "Click on button 1 and  click ok in pop up message")
     public void test1(){
         driver.findElement(By.linkText("JavaScript Alerts")).click();
+       // BrowserUtils.wait(2);
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
         BrowserUtils.wait(2);
         //to deal with popup, we can create object of Alert
         //Switches to the currently active modal dialog
         Alert alert = driver.switchTo().alert();
+        //BrowserUtils.wait(2);
         alert.accept();//to click ok
         BrowserUtils.wait(2);
     }
@@ -56,9 +58,11 @@ public class PopUpPractice {
         //should be Java is fun!
         System.out.println(driver.findElement(By.id("result")).getText());
         BrowserUtils.wait(2);
+
     }
     @AfterMethod
     public void teardown(){
+
         driver.quit();
     }
 }
